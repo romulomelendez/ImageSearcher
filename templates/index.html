@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="pt-br">
 
     <head>
 
@@ -11,7 +11,12 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <title>Search Images</title>
+        <!-- IMPORTING FONT FROM GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Neonderthaw&display=swap" rel="stylesheet">
+
+        <title>Advices</title>
 
         <style>
 
@@ -21,37 +26,27 @@
                 box-sizing: border-box;
             }
 
+            body { background-color: #cddfa5; }
+
             h1, form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin: 40px;
+            }
+            div.container { height: 70vh; }
+
+            form {
+                height: 100%;
+                margin-top: -20px;
             }
 
-            div.container, div.container02 {
-                display: flex;
-                flex-direction: column;
+            div.advice-container { margin-bottom: 30px; }
+
+            h3 {
+                margin-top: -100px;
+                font-family: 'Luxurious Roman', cursive;
             }
-
-            div.container02 {
-                justify-content: center;
-                align-items: center;
-                margin-top: 0px;
-            }
-
-             section.btn-section {
-                display: flex;
-                flex-direction: row;
-                margin-top: 20px;
-                gap: 20px;
-                 
-             }
-
-             button {
-                 width: 120px;
-                 padding: 7px;
-             }
 
         </style>
 
@@ -59,37 +54,19 @@
 
     <body>
 
-        <div class="container">
+        <div class = "container">
 
-            <h1 class = "mt-5 mb-3 ml-5">SEARCH FOR IMAGE</h1>
-            <form action="/" method = "POST">
+            <h1 class = "mt-5 mb-3 ml-5">Advice System</h1>
+            <form action = "/" method = "POST">
+   
+                <div class = "advice-container">
 
-                <div class = "input-group mb-3 w-75 ml-5">
-
-                    <input type = "text" class = "form-control" name = "stuff" placeholder = "Type anything you want to see">
-                    <div class = "input-group-append">
-
-                      <button class = "btn btn-primary" type = "submit">GO</button>
-
-                    </div>
+                    <h3>{{ advice }}</h3>
 
                 </div>
+                <button class = "btn btn-primary" type = "submit">Another Advice</button>
 
             </form>
-
-            <div class="container02">
-
-                <h3>Or select some presets options</h3>
-                <section class="btn-section">
-
-                    <button class="btn btn-primary">Cat</button>
-                    <button class="btn btn-primary">Dog</button>
-                    <button class="btn btn-primary">Turtle</button>
-                    <button class="btn btn-primary">Person</button>
-
-                </section>
-
-            </div>
 
         </div>
 
