@@ -20,4 +20,5 @@ def advice():
     return render_template('index.html', advice = ad)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    print('teste')
+    app.run(debug=True, host='0.0.0.0')
