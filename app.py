@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from webscrapping import getImage
+from api import getImage
 
 app = Flask(__name__)
 
